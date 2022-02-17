@@ -16,7 +16,7 @@ namespace ProyectoBD2U3.BACKEND
         /// <returns>True si pudo establecer la conexión y False en caso contrario</returns>
         public static bool conectar()
         {
-            string parametrosConexion = "";
+            string parametrosConexion = "server=localhost;uid=amin;pwd=110901;database=bdProyecto";
 
             try
             {
