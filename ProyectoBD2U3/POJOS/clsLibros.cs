@@ -20,8 +20,8 @@ namespace ProyectoBD2U3.POJOS
 
 		public int ID
         {
-			get { return id; }
-			set { id = value; }
+            get { return id; }
+            set { id = value; }
         }
 
 		public string ISBN
