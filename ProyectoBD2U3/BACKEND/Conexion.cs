@@ -16,7 +16,8 @@ namespace ProyectoBD2U3.BACKEND
         /// <returns>True si pudo establecer la conexión y False en caso contrario</returns>
         public static bool conectar()
         {
-            string parametrosConexion = "server=localhost;uid=amin;pwd=110901;database=bdProyecto";
+            //TODO:Revisar si Encrypt debe ser True cuando usemos el servidor
+            string parametrosConexion = "Server=localhost;User ID=admin;Password=110901;Initial Catalog=bdProyecto;Encrypt=False;";
 
             try
             {
