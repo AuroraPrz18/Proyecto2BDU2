@@ -5,7 +5,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <title></title>
+    <title>Libro</title>
+   
+    <script type="text/javascript">
+        //AQUI COLOCAR CODIGO JAVASCRIPT
+    </script>
     <style type="text/css">
         #form1 {
             height: 679px;
