@@ -13,21 +13,16 @@ namespace ProyectoBD2U3.FRONTEND
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if(Request.Params["type"] != null)
+            if(Request.Params["parametro"] != null)
             {
-                string type = Request.Params["type"];
-                if (type.Equals("0")) //Agregar
-                {
-                    txtID.Visible = false;
-                    Label1.Visible = false;
-                }
-                else //Modificar
-                {
-                    //TODO: revisar si tiene el parametro de ID, si si cargar los datos
-                    txtID.Visible = true;
-                    Label1.Visible = true;
-                }
-
+                txtID.Visible = true;
+                Label1.Visible = true;
+                string parametro = Request.Params["parametro"];
+            }
+            else
+            {
+                txtID.Visible = false;
+                Label1.Visible = false;
             }
         }
 

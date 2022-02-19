@@ -58,8 +58,7 @@ namespace ProyectoBD2U3.FRONTEND
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
-            // Mandar con paarametro type igual a 0 si es para agregar, con 1 si es para modificar
-            Response.Redirect("frmAgregarLibro.aspx?type=0");
+            Response.Redirect("frmAgregarLibro.aspx");
         }
 
         protected void btnModificar_Click(object sender, EventArgs e)
