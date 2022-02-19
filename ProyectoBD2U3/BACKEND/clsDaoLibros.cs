@@ -101,7 +101,7 @@ namespace ProyectoBD2U3.BACKEND
         }
 
 
-        public clsLibros obtenerLibro(String idLibro)
+        public clsLibros ObtenerLibro(String idLibro)
         {
             SqlCommand consulta =
                 new SqlCommand(@"select * from Libros where ID=@id");
