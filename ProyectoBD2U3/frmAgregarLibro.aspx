@@ -6,92 +6,61 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Libro</title>
-   
-    <script type="text/javascript">
-        //AQUI COLOCAR CODIGO JAVASCRIPT
-    </script>
-    <style type="text/css">
-        #form1 {
-            height: 679px;
-        }
-    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 <body>
-    <div id="encierraForm1" align="center" >
+    <h2 style="margin-top:0px; text-align:center; padding-top:20px; padding-bottom:20px;background-color: rgb(21,76,121); color: rgb(255,255,255);">Gestionar Libro</h2>
+    <div id="encierraForm1" style="margin-left:20%; margin-right:20%">
         <form id="form1" runat="server">
-        <div>
-        </div>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="ID"></asp:Label>
-&nbsp;<br />
-&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtID" runat="server" Width="66px"></asp:TextBox>
-        <br />
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="ISBN"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="Titulo"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label4" runat="server" Font-Bold="True" Text="Número de Edición"></asp:Label>
-        <br />
-&nbsp;&nbsp;
-        <asp:TextBox ID="txtISBN" runat="server" Width="140px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtTitulo" runat="server" style="margin-bottom: 0px" Width="301px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtNumEdicion" runat="server" Width="123px"></asp:TextBox>
-        <br />
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label6" runat="server" Font-Bold="True" Text="Nomdre De Los Autores"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label5" runat="server" Font-Bold="True" Text="País de Publicación"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label7" runat="server" Font-Bold="True" Text="Sinopsis "></asp:Label>
-        <br />
-&nbsp;&nbsp;
-        <asp:TextBox ID="txtAutores" runat="server" Height="16px" Width="275px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtPais" runat="server" Width="155px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtSinopsis" runat="server" style="margin-left: 0px" Width="226px"></asp:TextBox>
-&nbsp;
-        <br />
-        <br />
-        <br />
-&nbsp;
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label8" runat="server" Font-Bold="True" Text="Carrera"></asp:Label>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label9" runat="server" Font-Bold="True" Text="Materia "></asp:Label>
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtCarrera" runat="server" Height="23px" Width="199px"></asp:TextBox>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:TextBox ID="txtMateria" runat="server" Height="23px" Width="199px"></asp:TextBox>
-&nbsp;&nbsp;
-        <br />
-        <br />
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Label ID="Label10" runat="server" Font-Bold="True" Text="Año de Publicación"></asp:Label>
-        <div style="margin-left: 320px">
-            <asp:TextBox ID="txtAnio" runat="server"></asp:TextBox>
-        </div>
-        <br />
-        <br />
-        <br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnCancelar" runat="server" Font-Bold="True" Text="Cancelar" OnClick="btnCancelar_Click" />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <asp:Button ID="btnGuardar" runat="server" Font-Bold="True" Text="Guardar" OnClick="btnGuardar_Click" />
+            <div class="form-group" >
+                <div class="form-group col-1" style="margin:20px">
+                    <asp:Label ID="Label1" runat="server" Font-Bold="True" Text="ID"></asp:Label>
+                    <asp:TextBox ID="txtID" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group col-3" style="margin:20px">
+                    <asp:Label ID="Label2" runat="server" Font-Bold="True" Text="ISBN"></asp:Label>
+                    <asp:TextBox ID="txtISBN" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group col-md-12" style="margin:20px">
+                    <asp:Label ID="Label3" runat="server" Font-Bold="True" Text="Titulo"></asp:Label>
+                    <asp:TextBox ID="txtTitulo" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group col-md-3" style="margin:20px">
+                    <asp:Label ID="Label4" runat="server" Font-Bold="True" Text="No. de Edición"></asp:Label>
+                    <asp:TextBox ID="txtNumEdicion" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group col-md-3" style="margin:20px">
+                    <asp:Label ID="Label10" runat="server" Font-Bold="True" Text="Año de Publicación"></asp:Label>
+                    <asp:TextBox ID="txtAnio" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group col-md-12" style="margin:20px">
+                    <asp:Label ID="Label6" runat="server" Font-Bold="True" Text="Nombre De Los Autores"></asp:Label>
+                    <asp:TextBox ID="txtAutores" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group col-md-3" style="margin:20px">
+                    <asp:Label ID="Label5" runat="server" Font-Bold="True" Text="País de Publicación"></asp:Label>
+                    <asp:TextBox ID="txtPais" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group col-md-12" style="margin:20px">
+                    <asp:Label ID="Label7" runat="server" Font-Bold="True" Text="Sinopsis "></asp:Label>
+                    <asp:TextBox ID="txtSinopsis" class="form-control" runat="server" style="margin-left: 0px"></asp:TextBox>
+                </div>
+                <div class="form-group col-md-12" style="margin:20px">
+                    <asp:Label ID="Label8" runat="server" Font-Bold="True" Text="Carrera"></asp:Label>
+                    <asp:TextBox ID="txtCarrera" class="form-control" runat="server"></asp:TextBox>
+                </div>
+                <div class="form-group col-md-12" style="margin:20px">
+                    <asp:Label ID="Label9" runat="server" Font-Bold="True" Text="Materia "></asp:Label>
+                    <asp:TextBox ID="txtMateria" class="form-control" runat="server"></asp:TextBox>
+                </div>
+            </div>
+           <div class="container" align="center">
+            <asp:Button ID="btnCancelar" class="btn btn-primary" style="margin: 20px; padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background-color:rgb(74, 92, 128); color:rgb(255,255,255)" runat="server" Font-Bold="True" Text="Cancelar" OnClick="btnCancelar_Click" />
+            <asp:Button ID="btnGuardar" class="btn btn-primary" style="margin: 20px; padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background-color:rgb(74, 92, 128); color:rgb(255,255,255)" runat="server" Font-Bold="True" Text="Guardar" OnClick="btnGuardar_Click" />
+           </div> 
         </form>
+
     </div>
 </body>
 </html>
