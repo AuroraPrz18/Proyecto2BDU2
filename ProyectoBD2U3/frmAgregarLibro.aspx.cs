@@ -13,12 +13,11 @@ namespace ProyectoBD2U3.FRONTEND
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-<<<<<<< HEAD
             if(Request.Params["parametro"] != null)
             {
+                txtID.Text = Request.Params["parametro"];
                 txtID.Visible = true;
                 Label1.Visible = true;
-                string parametro = Request.Params["parametro"];
             }
             else
             {
@@ -47,15 +46,12 @@ namespace ProyectoBD2U3.FRONTEND
             {
                 Response.Redirect("Default.aspx");
             }
-=======
-            if (Request.Params["parametro"] != null)
-                txtID.Text = Request.Params["parametro"];
+                
         }
 
         protected void btnCancelar_Click(object sender, EventArgs e)
         {
             Response.Redirect("Default.aspx");
->>>>>>> 8abda5642e58206295bd3073539c3237ffb76a58
         }
     }
 }
