@@ -14,7 +14,6 @@ namespace ProyectoBD2U3.FRONTEND
         protected void Page_Load(object sender, EventArgs e)
         {
             actualizarTabla();
-            btnEliminar.OnClientClick = "return(confirm('¿Estás seguro de que quieres eliminar el libro?'));";
         }
 
         private void actualizarTabla()
@@ -24,39 +23,26 @@ namespace ProyectoBD2U3.FRONTEND
                 clsDaoLibros daoLibros = new clsDaoLibros();
                 List<clsLibros> libros = daoLibros.ListaLibros();
                 gvLibros.DataSource = libros;
-                /*for(int i=0; i<libros.Count; i++)
-                {
-                    gvLibros.Columns[i].InitializeCell(new CheckBoxField(), Boolean);
-                }*/
                 gvLibros.DataBind();
             }
             catch (NoControllerException ex)
             {
-                //TODO: Investigar el equivalente a messagebox
-                foreach (Control control in this.Controls)
-                {
-                    control.Visible = false;
-                }
-                Response.Write(ex.Message);
-                //MessageBox.Show(this, ex.Message, "Operación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnAgregar.Visible = false;
+                string mensaje = string.Format("alert('{0}');", ex.Message);
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
+                //Response.Write(ex.Message);
             }
             catch (ConnectionException ex)
             {
-                foreach (Control control in this.Controls)
-                {
-                    control.Visible = false;
-                }
-                Response.Write(ex.Message);
-                //MessageBox.Show(this, ex.Message, "Operación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnAgregar.Visible = false;
+                string mensaje = string.Format("alert('{0}');", ex.Message);
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
             }
             catch (Exception ex)
             {
-                foreach (Control control in this.Controls)
-                {
-                    control.Visible = false;
-                }
-                Response.Write("Ha ocurrido un error al realizar la operación");
-                //MessageBox.Show(this, "Ha ocurrido un error al realizar la operación", "Operación fallida", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                btnAgregar.Visible = false;
+                string mensaje = "alert('Ha ocurrido un error al realizar la operación');";
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
             }
         }
 
@@ -65,46 +51,54 @@ namespace ProyectoBD2U3.FRONTEND
             Response.Redirect("frmAgregarLibro.aspx");
         }
 
-        protected void btnModificar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("frmAgregarLibro.aspx");
-        }
-
-        protected void btnEliminar_Click(object sender, EventArgs e)
-        {
-            //TODO:¿Ponemos un textbox para que el usuario escriba el ID del libro a eliminar o cómo?
-            
-        }
-
         protected void gvLibros_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
             int pos = e.RowIndex;
             clsDaoLibros daoLibros = new clsDaoLibros();
-            if (pos != -1)
+            string mensaje;
+            try
             {
-                try
+                if (daoLibros.EliminarLibro(gvLibros.Rows[pos].Cells[1].Text))
                 {
-                    if (daoLibros.EliminarLibro(gvLibros.Rows[pos].Cells[1].Text))
-                    {
-                        actualizarTabla();
-                    }
-                    else
-                    {
-
-                    }
-                } catch (Exception ex)
-                {
-
+                    mensaje = "alert('Libro eliminado exitosamente');";
+                    actualizarTabla();
                 }
+                else
+                {
+                    mensaje = "alert('Ha ocurrido un error al eliminar el libro');";
+                }
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
             }
-            
+            catch (NoControllerException ex)
+            {
+                mensaje = string.Format("alert('{0}');", ex.Message);
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
+            }
+            catch (ConnectionException ex)
+            {
+                mensaje = string.Format("alert('{0}');", ex.Message);
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
+            }
+            catch (Exception ex)
+            {
+                mensaje = "alert('Ha ocurrido un error al realizar la operación');";
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
+            }
         }
 
         protected void gvLibros_RowEditing(object sender, GridViewEditEventArgs e)
         {
             int pos = e.NewEditIndex;
-            if(pos != -1)
-                Response.Redirect("frmAgregarLibro.aspx?parametro="+gvLibros.Rows[pos].Cells[1].Text);
+            Response.Redirect("frmAgregarLibro.aspx?parametro="+gvLibros.Rows[pos].Cells[1].Text);
+        }
+
+        protected void gvLibros_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                LinkButton db = (LinkButton)e.Row.Cells[0].Controls[2];
+                db.OnClientClick = "return confirm('¿Está seguro de que desea eliminar el libro?');";
+            }
         }
     }
 }
