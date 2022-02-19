@@ -28,6 +28,7 @@ namespace ProyectoBD2U3.FRONTEND
             catch (NoControllerException ex)
             {
                 btnAgregar.Visible = false;
+                gvLibros.Visible = false;
                 string mensaje = string.Format("alert('{0}');", ex.Message);
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
                 //Response.Write(ex.Message);
@@ -35,12 +36,14 @@ namespace ProyectoBD2U3.FRONTEND
             catch (ConnectionException ex)
             {
                 btnAgregar.Visible = false;
+                gvLibros.Visible = false;
                 string mensaje = string.Format("alert('{0}');", ex.Message);
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
             }
             catch (Exception ex)
             {
                 btnAgregar.Visible = false;
+                gvLibros.Visible = false;
                 string mensaje = "alert('Ha ocurrido un error al realizar la operación');";
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
             }
@@ -71,16 +74,22 @@ namespace ProyectoBD2U3.FRONTEND
             }
             catch (NoControllerException ex)
             {
+                btnAgregar.Visible = false;
+                gvLibros.Visible = false;
                 mensaje = string.Format("alert('{0}');", ex.Message);
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
             }
             catch (ConnectionException ex)
             {
+                btnAgregar.Visible = false;
+                gvLibros.Visible = false;
                 mensaje = string.Format("alert('{0}');", ex.Message);
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
             }
             catch (Exception ex)
             {
+                btnAgregar.Visible = false;
+                gvLibros.Visible = false;
                 mensaje = "alert('Ha ocurrido un error al realizar la operación');";
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", mensaje, true);
             }
