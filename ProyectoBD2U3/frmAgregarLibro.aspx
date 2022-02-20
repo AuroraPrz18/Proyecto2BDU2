@@ -56,9 +56,9 @@
                 </div>
             </div>
            <div class="container" align="center">
-            <asp:Button ID="btnCancelar" class="btn btn-primary" style="margin: 20px; padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background-color:rgb(74, 92, 128); color:rgb(255,255,255)" runat="server" Font-Bold="True" Text="Cancelar" OnClick="btnCancelar_Click" />
-            <asp:Button ID="btnGuardar" class="btn btn-primary" style="margin: 20px; padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background-color:rgb(74, 92, 128); color:rgb(255,255,255)" runat="server" Font-Bold="True" Text="Guardar" OnClick="btnGuardar_Click" />
-           </div> 
+               <asp:Button ID="btnCancelar" class="btn btn-primary" style="margin: 20px; padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background-color:rgb(74, 92, 128); color:rgb(255,255,255)" runat="server" Font-Bold="True" Text="Cancelar" OnClick="btnCancelar_Click" />
+               <asp:Button ID="btnGuardar" class="btn btn-primary" style="margin: 20px; padding-left: 20px; padding-right: 20px; padding-top: 10px; padding-bottom: 10px; background-color:rgb(74, 92, 128); color:rgb(255,255,255)" runat="server" Font-Bold="True" Text="Guardar" OnClick="btnGuardar_Click" />
+           </div>
         </form>
 
     </div>

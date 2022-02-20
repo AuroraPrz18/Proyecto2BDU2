@@ -48,11 +48,12 @@ namespace ProyectoBD2U3.BACKEND
         public bool ActualizarLibro(clsLibros libro)
         {
 
-            SqlCommand update = new SqlCommand(@"update Libros "
-                + "set ISBN = @isbn, Titulo = @titulo, NumEdicion = @numEdicion, AnioPublicacion = @anioPublicacion, "
-                + "NombresAutores = @nombresAutores, PaisPublicacion = @paisPublicacion, Sinopsis =  @sinopsis, "
-                + "Carrera = @carrera, Materia = @materia"
-                + "where ID = @id");
+            SqlCommand update = new SqlCommand(@"update Libros 
+                set ISBN =@isbn, Titulo =@titulo, NumEdicion =@numEdicion, 
+                AnioPublicacion = @anioPublicacion, NombresAutores =@nombresAutores, 
+                PaisPublicacion =@paisPublicacion, Sinopsis =@sinopsis, Carrera =@carrera, 
+                Materia =@materia 
+                 where ID=@id");
 
             update.Parameters.AddWithValue("@id", libro.ID);
             update.Parameters.AddWithValue("@isbn", libro.ISBN);
